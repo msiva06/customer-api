@@ -6,25 +6,35 @@ public class Customer {
     private int customerId;
     private String firstName;
     private String lastName;
+  
     private String email;
     private String phoneNumber;
-    private String address;
-    private String city;
-    private String state;
-    private int postalCode;
-    private String country;
+    private Address address;
     private double totalSpent;
     private Date lastPurchaseDate;
     private Date birthday;
-    private enum MEMBERSHIP{
-        BASIC,
-        PRIME
-    };
-    private enum PAYMENT_METHOD{
-        CREDITCARD,
-        PAYPAL
+    private String memberShip;
+    private String paymentMethod;
+
+    public Address getAddress() {
+        return address;
+    }
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
+    public String getMemberShip() {
+        return memberShip;
+    }
+    public void setMemberShip(String memberShip) {
+        this.memberShip = memberShip;
+    }
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
     public int getCustomerId() {
         return customerId;
     }
@@ -56,36 +66,7 @@ public class Customer {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-    public String getAddress() {
-        return address;
-    }
-    public void setAddress(String address) {
-        this.address = address;
-    }
-    public String getCity() {
-        return city;
-    }
-    public void setCity(String city) {
-        this.city = city;
-    }
-    public String getState() {
-        return state;
-    }
-    public void setState(String state) {
-        this.state = state;
-    }
-    public int getPostalCode() {
-        return postalCode;
-    }
-    public void setPostalCode(int postalCode) {
-        this.postalCode = postalCode;
-    }
-    public String getCountry() {
-        return country;
-    }
-    public void setCountry(String country) {
-        this.country = country;
-    }
+    
     public double getTotalSpent() {
         return totalSpent;
     }
